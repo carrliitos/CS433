@@ -63,12 +63,12 @@ public class RadixSort {
 		
 		radixSortNonNeg(NonNeg, NonNeg.length);
 		
-		for(int i = 0; i < Neg.length; i++) {
-			if(Neg[i] < 0) Neg[i] = Neg[-i];
+		for(int i = 0; i <= Neg.length; i++) {
+			Neg[i] = Neg[-i];
 		}
 		radixSortNonNeg(Neg, Neg.length);
-		for(int i = 0; i < Neg.length; i++) {
-			if(Neg[i] > 0) Neg[i] = Neg[-i];
+		for(int i = 0; i <= Neg.length; i++) {
+			Neg[i] = Neg[-i];
 		}
 
 		// Combine Neg[] and NonNeg[] to the original array
