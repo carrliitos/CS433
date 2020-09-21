@@ -13,7 +13,9 @@ public class QuickSort extends Partition {
 	}
 
 	private void quicksortMedianOf3(int left, int right) {
-		if(left < right) {
+		if((left + right) < 32){
+			insertionSort(array, left, right);
+		}else if(left < right) {
 			int pivot = generateMedianOf3Pivot(left, right);
 			int partitionIndex = partition(left, right, pivot);
 			quicksortMedianOf3(left, partitionIndex - 1);
@@ -22,7 +24,9 @@ public class QuickSort extends Partition {
 	}
 
 	private void quicksortRandom(int left, int right) {
-		if(left < right) {
+		if((left + right) < 32) {
+			insertionSort(array, left, right);
+		}else if(left < right) {
 			int pivot = generateRandomPivot(left, right);
 			int partitionIndex = partition(left, right, pivot);
 			quicksortRandom(left, partitionIndex - 1);

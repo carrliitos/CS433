@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Partition {
+public class Partition extends InsertionSort{
 
 	final int array[];
 	final int n;
@@ -41,7 +41,7 @@ public class Partition {
 
 	public int partition(int left, int right, int pivot) {
 		int pivotIndex = left, partitionIndex = (left - 1), temp = 0;
-		for(int k = left; k < right; k++) {
+		for(int k = left; k <= right; k++) {
 			if(array[k] == pivot) pivotIndex = k;
 			if(array[k] <= pivot) partitionIndex++;
 		}

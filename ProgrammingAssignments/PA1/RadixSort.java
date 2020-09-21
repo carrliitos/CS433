@@ -14,15 +14,15 @@ public class RadixSort {
 			C[i] = 0;
 		}
 		int T[] = new int[n];
-		for(int i = 0; i < n - 1; i++) {
-			digits[i] = C[i];
+		for(int i = 0; i <= n - 1; i++) {
+			C[digits[i]]++;
 		}
 		for(int i = 1; i <= 9; i++) {
 			C[i] = C[i - 1] + C[i];
 		}
 		for(int i = n - 1; i >= 0; i--) {
 			T[C[digits[i]] - 1] = A[i];
-			digits[i] = C[i];
+			C[digits[i]]--;
 		}
 		// Copy elements of T to A
 		for(int i = 0; i < T.length; i++) {
