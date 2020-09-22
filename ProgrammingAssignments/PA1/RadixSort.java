@@ -48,35 +48,29 @@ public class RadixSort {
 	}
 
 	public void radixSort() {
-		// create two separate arrays - NEG[] and NONNEG[]
-		int x = 0, y = 0;
-		for(int i = 0; i < array.length; i++) {
-			x++;
-			y++;
+		// find the minimum number in the array
+		// if minimum is non-neg, then radix sort the array
+		if(getMin(array) > 0) radixSortNonNeg(array, array.length);
+		else {
+			int min = getMin(array);
+			for(int i = 0; i < array.length; i++) {
+				array[i] = array[i] - min;
+			}
+			radixSortNonNeg(array, array.length);
+			for(int i = 0; i < array.length; i++) {
+				array[i] = array[i] + min;
+			}
 		}
-		int Neg[] = new int[x];
-		int NonNeg[] = new int[y];
-		for(int i = 0; i < array.length; i++) {
-			if(array[i] > 0) NonNeg[i] = array[i];
-			else Neg[i] = array[i];
-		}
-		
-		radixSortNonNeg(NonNeg, NonNeg.length);
-		
-		for(int i = 0; i <= Neg.length; i++) {
-			Neg[i] = Neg[-i];
-		}
-		radixSortNonNeg(Neg, Neg.length);
-		for(int i = 0; i <= Neg.length; i++) {
-			Neg[i] = Neg[-i];
-		}
+	}
 
-		// Combine Neg[] and NonNeg[] to the original array
-		for(int i = Neg.length - 1; i > Neg.length; i--) {
-			array[i] = Neg[i];
+	// Helper method for radixSort()
+	public static int getMin(int[] inputArray) {
+		int minVal = inputArray[0];
+		for(int i = 1; i < inputArray.length; i++) {
+			if(inputArray[i] < minVal) {
+				minVal = inputArray[i];
+			}
 		}
-		for(int i = 0; i < NonNeg.length; i++) {
-			array[i] = NonNeg[i];
-		}
+		return minVal;
 	}
 }
