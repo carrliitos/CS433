@@ -13,7 +13,8 @@ public class QuickSort extends Partition {
 	}
 
 	private void quicksortMedianOf3(int left, int right) {
-		if(right - left < 31) {
+		int difference = right - left;
+		if(difference < 32) {
 			InsertionSort.insertionSort(array, left, right);
 			return;
 		}else if(left < right) {
@@ -25,7 +26,8 @@ public class QuickSort extends Partition {
 	}
 
 	private void quicksortRandom(int left, int right) {
-		if(right - left < 32) {
+		int difference = right - left;
+		if(difference < 32) {
 			InsertionSort.insertionSort(array, left, right);
 			return;
 		}else if(left < right) {

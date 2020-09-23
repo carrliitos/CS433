@@ -59,5 +59,32 @@ public class Partition extends InsertionSort{
 			}
 		}
 		return partitionIndex;
+
+		// int pivotIndex = left, partitionIndex = (left - 1);
+		// for(int k = left; k <= right; k++) {
+		// 	if(array[k] == pivot) {
+		// 		pivotIndex = k;
+		// 	}
+		// 	if(array[k] <= pivot) {
+		// 		partitionIndex++;
+		// 	}
+		// }
+		// swap(pivotIndex, partitionIndex);
+
+		// int i = left, j = right;
+		// while(i < j) {
+		// 	do {
+		// 		i++;
+		// 	} while(i <= partitionIndex & array[i] <= pivot);
+		// 	do {
+		// 		j--;
+		// 	} while(j > partitionIndex & array[j] > pivot);
+		// 	if(i < j) {
+		// 		swap(i, j);
+		// 		i++;
+		// 		j--;
+		// 	}
+		// }
+		// return partitionIndex;
 	}
 }

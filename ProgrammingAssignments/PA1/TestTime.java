@@ -1,9 +1,7 @@
 import java.util.Random;
 
 public class TestTime {
-
 	static Random rand;
-
 	private static void testIfSorted(int A[], int len, char s) throws Exception {
 		for (int i = 0; i < len - 1; i++)
 			if (A[i] > A[i + 1]) {
