@@ -24,11 +24,7 @@ public class InversionCounting {
 	}
 
 	private int countInversions(int left, int right) { // complete this function
-		
-		
-        int inv_count = 0; 
-  
-      
+        int inv_count = 0;       
         int mid = (left + right) / 2; 
         int i = left, j = mid + 1, k = left;
         k = left; 
@@ -43,8 +39,7 @@ public class InversionCounting {
                 inv_count = inv_count + 1; 
             } 
         } 
-  
-       
+
         while (i <= mid - 1) 
         	mergedArray[k++] = array[i++]; 
             //check for inversions counts and increment 
