@@ -18,7 +18,7 @@ public class Selection extends Partition {
 		if(k == (partitionIndex - left + 1)) {
 			return pivot;
 		}else if(k < (partitionIndex - left + 1)){
-			return select(left, partitionIndex - 1, k );
+			return select(left, partitionIndex - 1, k);
 		}else {
 			return select(partitionIndex + 1, right, k - (partitionIndex - left + 1));
 		}
