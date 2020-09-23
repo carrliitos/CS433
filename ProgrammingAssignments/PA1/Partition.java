@@ -42,22 +42,18 @@ public class Partition extends InsertionSort{
 	public int partition(int left, int right, int pivot) {
 		int pivotIndex = left, partitionIndex = (left - 1);
 		for(int k = left; k < right; k++) {
-			if(array[k] == pivot){
-				pivotIndex = k;
-			} 
-			if(array[k] <= pivot) {
-				partitionIndex++;
-			} 
+			if(array[k] == pivot) pivotIndex = k;
+			if(array[k] <= pivot) partitionIndex++;
 		}
-		
-		swap(array[pivotIndex], array[partitionIndex]);
+
+		swap(pivotIndex, partitionIndex);
 		
 		int i = left, j = right;
 		while(i < j) {
 			while(i <= partitionIndex && array[i] <= pivot) i++;
 			while(j > partitionIndex && array[j] > pivot) j--;
 			if(i < j) {
-				swap(array[i], array[j]);
+				swap(i, j);
 				i++;
 				j--;
 			}
