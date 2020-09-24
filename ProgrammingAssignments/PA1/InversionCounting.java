@@ -25,8 +25,8 @@ public class InversionCounting {
 
 	private int countInversions(int left, int right) { // complete this function
         int count = 0;
-        for (int i = 0; i < n-2; i++)
-            for (int j = i + 1; j < n-1; j++)
+        for (int i = 0; i <= n - 2; i++)
+            for (int j = i + 1; j <= n - 1; j++)
                 if (array[i] > array[j])
                     count++;
         return count;
