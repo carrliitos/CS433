@@ -39,6 +39,11 @@ public class Partition extends InsertionSort{
 		return array[mid];
 	}
 
+	protected int generateMedian(int left, int right) {
+		int median = (left + right) / 2;
+		return array[median];
+	}
+
 	public int partition(int left, int right, int pivot) {
 		int pivotIndex = left, partitionIndex = (left - 1);
 		for(int k = left; k <= right; k++) {

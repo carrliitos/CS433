@@ -14,6 +14,11 @@ public class TestCorrectness {
 
 		for (int i = 0; i < n; i++)
 			temp[i] = array[i];
+		new QuickSort(temp, n).quicksortMedian();
+		System.out.println("QuickSorted (median) array:      " + Arrays.toString(temp));
+
+		for (int i = 0; i < n; i++)
+			temp[i] = array[i];
 		new QuickSort(temp, n).quicksortMedianOf3();
 		System.out.println("QuickSorted (median of 3) array: " + Arrays.toString(temp));
 
@@ -55,7 +60,7 @@ public class TestCorrectness {
 
 	public static void main(String args[]) throws Exception {
 		System.out.println("*** Correctness Test ***\n");
-		int sorting[] = { 19, 1, 12, 100, 7, 8, 4, -10, 14, -1, 97, -1009, 4210 };
+		int sorting[] = { 1, 30, 5, 5, 3, 5, 5, 5 };
 		int n = sorting.length;
 		int selection[] = new int[n];
 		for (int i = 0; i < n; i++)
