@@ -19,6 +19,11 @@ public class Partition extends InsertionSort{
 		array[y] = temp;
 	}
 
+	protected int generateFirstNumPivot(int left, int right) {
+		int pivotIndex = array[0];
+		return pivotIndex;
+	}
+
 	protected int generateRandomPivot(int left, int right) {
 		int pivotIndex = left + rand.nextInt(right - left + 1);
 		return array[pivotIndex];
@@ -58,7 +63,7 @@ public class Partition extends InsertionSort{
 			while(i <= partitionIndex && array[i] <= pivot) i++;
 			while(j > partitionIndex && array[j] > pivot) j--;
 			if(i < j) {
-				swap(i, j);
+				swap(i, i);
 				i++;
 				j--;
 			}

@@ -18,6 +18,10 @@ public class QuickSort extends Partition {
 		quicksortMedian(0, n - 1);
 	}
 
+	public void quicksortFirstNum() {
+		quicksortFirstNum(0, n - 1);
+	}	
+
 	private void quicksortMedianOf3(int left, int right) {
 		int difference = right - left;
 		if(difference < 32) {
@@ -57,8 +61,21 @@ public class QuickSort extends Partition {
 		}
 	}
 
+	private void quicksortFirstNum(int left, int right) {
+		int difference = right - left;
+		if(difference < 32) {
+			InsertionSort.insertionSort(array, left, right);
+			return;
+		}else if(left < right) {
+			int pivot = generateFirstNumPivot(left, right);
+			int partitionIndex = partition(left, right, pivot);
+			quicksortFirstNum(left, partitionIndex - 1);
+			quicksortFirstNum(partitionIndex + 1, right);
+		}
+	}	
+
 	public static void main(String[] args) {
-		int arr[] = { 19, 1, 12, 100, 7, 8, 4, -10, 14, -1, 97, -1009, 4210 };
+		int arr[] = { -400, -1100, -450, -500, -620, -800, -640, -400, -8, 11, 10, -80, 12, -40, 16, -4 };
 		int n = arr.length;
 		int temp[] = new int[n];
 
@@ -69,5 +86,9 @@ public class QuickSort extends Partition {
 		for(int i = 0; i < n; i++) temp[i] = arr[i];
 		new QuickSort(temp, n).quicksortMedian();
 		System.out.println("QuickSorted (median) array:      " + Arrays.toString(temp));
+
+		for(int i = 0; i < n; i++) temp[i] = arr[i];
+		new QuickSort(temp, n).quicksortFirstNum();
+		System.out.println("QuickSorted (first num) array:      " + Arrays.toString(temp));		
 	}
 }
