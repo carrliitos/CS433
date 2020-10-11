@@ -89,6 +89,8 @@ public class QuickSort extends Partition {
 
 		for(int i = 0; i < n; i++) temp[i] = arr[i];
 		new QuickSort(temp, n).quicksortFirstNum();
-		System.out.println("QuickSorted (first num) array:      " + Arrays.toString(temp));		
+		System.out.println("QuickSorted (first num) array:      " + Arrays.toString(temp));
+
+		
 	}
 }

@@ -70,4 +70,18 @@ public class Partition extends InsertionSort{
 		}
 		return partitionIndex;
 	}
+
+	public int lastNumPartition(int left, int right) {
+		int pivot = array[left];
+		int i = left - 1;
+		int j = right + 1;
+		while(i < j) {
+			for(i++; array[i] < pivot; i++);
+			for(j--; array[j] > pivot; j--);
+			if(i < j) {
+				swap(i, j);
+			}
+		}
+		return j;
+	}
 }
