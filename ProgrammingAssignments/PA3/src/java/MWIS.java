@@ -19,7 +19,13 @@ public class MWIS extends Tree {
 		}
 	}
 
-	public int computeSum(int node) { // complete this function
+	public int computeSum(int node) {
+		if(computedSum[node] != Integer.MIN_VALUE) return computedSum[node];
+
+		int excl = 0;
+		int incl = weights[node];
+		// still need to finish
+
 	}
 
 	public void computeSet(int root) { // complete this function
