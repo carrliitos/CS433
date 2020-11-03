@@ -1,0 +1,107 @@
+****************** Subset Sum ******************
+
+Elements are [3, 34, 4, 12, 5, 2]
+Can be formed: [3, 9, 12, 20, 22, 26, 38, 50]
+Cannot be formed: [13, 27, 47, 62]
+
+***
+
+Elements are [15, 22, 14, 26, 32, 9, 16, 8]
+Can be formed: [8, 40, 54, 80, 118, 125]
+Cannot be formed: [12, 10, 114, 121, 150]
+
+***
+
+Elements are [41, 34, 21, 20, 8, 7, 7, 4, 3, 3]
+Can be formed: [4, 8, 22, 28, 50, 89, 122, 138, 148]
+Cannot be formed: [1, 9, 16, 139, 150, 183]
+
+****************** 0-1 Knapsack ******************
+
+Weights are [5, 4, 6, 3, 2]
+Profits are [10, 40, 30, 50, 25]
+
+Optimal profit for knapsack of capacity  2 is  25
+Optimal profit for knapsack of capacity  3 is  50
+Optimal profit for knapsack of capacity  5 is  75
+Optimal profit for knapsack of capacity 10 is 115
+Optimal profit for knapsack of capacity 14 is 125
+Optimal profit for knapsack of capacity 15 is 145
+Optimal profit for knapsack of capacity 17 is 145
+Optimal profit for knapsack of capacity 20 is 155
+
+***
+
+Weights are [12, 7, 11, 8, 9]
+Profits are [24, 13, 23, 15, 16]
+
+Optimal profit for knapsack of capacity 26 is  51
+Optimal profit for knapsack of capacity 46 is  78
+Optimal profit for knapsack of capacity 60 is  91
+Optimal profit for knapsack of capacity 80 is  91
+
+***
+
+Weights are [23, 31, 29, 44, 53, 38, 63, 85, 89, 82]
+Profits are [92, 57, 49, 68, 60, 43, 67, 84, 87, 72]
+
+Optimal profit for knapsack of capacity 165 is 309
+Optimal profit for knapsack of capacity 310 is 456
+Optimal profit for knapsack of capacity 400 is 540
+Optimal profit for knapsack of capacity 410 is 549
+Optimal profit for knapsack of capacity 800 is 679
+
+****************** Maximum Subarray Sum ******************
+
+Array: [10, -5, 15, -10, 20, -15]
+Maximum sum subarray has sum = 30. It starts at index = 0 and ends at index = 4
+
+***
+
+Array: [70, -80, 60, 80, -90, 100, -150, 50]
+Maximum sum subarray has sum = 150. It starts at index = 2 and ends at index = 5
+
+***
+
+Array: [70, -50, 40, -70, 20, 40, -10, 15]
+Maximum sum subarray has sum = 70. It starts at index = 0 and ends at index = 0
+
+****************** Maximum Weighted Independent Set ******************
+
+*** Tree 1 ***
+
+Maximum Independent Set has value = 5
+The included nodes are: [0, 3, 5, 6, 7]
+
+*** Tree 2 ***
+
+Maximum Independent Set has value = 75
+The included nodes are: [1, 2, 7, 8, 9, 10, 11]
+
+*** Tree 3 ***
+
+Maximum Independent Set has value = 10
+The included nodes are: [0, 4, 5, 6, 8, 10, 11, 12, 13, 14]
+
+*** Tree 4 ***
+
+Maximum Independent Set has value = 53
+The included nodes are: [0, 4, 5, 6, 8, 9, 10, 11, 12, 13]
+
+****************** Longest Common Subsequence ******************
+
+First String: AGGTAB
+Another String: GXTXAYB
+Longest Common Subsequence is GTAB having length 4
+
+***
+
+First String: XMJYAUZ
+Another String: MZJAWXU
+Longest Common Subsequence is MJAU having length 4
+
+***
+
+First String: AAACCGTGAGTTATTCGTTCTAGAA
+Another String: CACCCCTAAGGTACCTTTGGTTC
+Longest Common Subsequence is ACCTAGTATTGTTC having length 14
