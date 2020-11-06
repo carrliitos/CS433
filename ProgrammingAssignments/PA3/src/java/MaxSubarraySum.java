@@ -1,15 +1,20 @@
 public class MaxSubarraySum {
 
 	public static int[] dynamicProgram(final int A[], int length) {
-		int localMax = A[0], globalMax = A[0];
-		int localStartIndex = 0, globalStartIndex = 0, globalEndIndex = 0;
-		for(int i = 0; i < length; i++) {
+		int localMax = A[0];
+		int globalMax = A[0];
+		int localStartIndex = 0;
+		int globalStartIndex = 0;
+		int globalEndIndex = 0;
+		
+		for(int i = 1; i < length; i++) {
 			if(localMax > 0) {
 				localMax += A[i];
 			}else {
 				localMax = A[i];
 				localStartIndex = i;
 			}
+			
 			if(localMax > globalMax) {
 				globalMax = localMax;
 				globalStartIndex = localStartIndex;

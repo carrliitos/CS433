@@ -40,6 +40,6 @@ public class LCS {
 			else leny--;
 		}
 
-		return new StringBuilder(answer).reverse().toString()
+		return new StringBuilder(answer).reverse().toString();
 	}
 }
