@@ -7,10 +7,10 @@ public class SubsetSum {
 		sums.add(0);
 		for(int i = 0; i < numElements; i++) {
 			int[] values = new int[sums.size()];
-			Iterator<Integer> it = sums.iterator();
+			Iterator<Integer> iterate = sums.iterator();
 			int count = 0;
-			while(it.hasNext()) {
-				values[count] = it.next();
+			while(iterate.hasNext()) {
+				values[count] = iterate.next();
 				count++;
 			}
 			for(int j = 0; j < values.length; j++) {

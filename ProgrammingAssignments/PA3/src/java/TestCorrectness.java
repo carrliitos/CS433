@@ -9,36 +9,36 @@ public class TestCorrectness {
 	private static final String MIS3_TREE_PATH = "textfiles/mis3.txt";
 	private static final String MIS4_TREE_PATH = "textfiles/mis4.txt";
 
-	// private static void testSubsetSumHelper(int elements[], int numElements, int targets[], int numTarget) {
-	// 	System.out.println("Elements are " + Arrays.toString(elements));
-	// 	ArrayList<Integer> formed = new ArrayList<Integer>();
-	// 	ArrayList<Integer> notFormed = new ArrayList<Integer>();
-	// 	for (int i = 0; i < targets.length; i++) {
-	// 		if (SubsetSum.isSumPossible(elements, numElements, targets[i]))
-	// 			formed.add(targets[i]);
-	// 		else
-	// 			notFormed.add(targets[i]);
-	// 	}
-	// 	System.out.println("Can be formed: " + formed);
-	// 	System.out.println("Cannot be formed: " + notFormed);
-	// }
+	private static void testSubsetSumHelper(int elements[], int numElements, int targets[], int numTarget) {
+		System.out.println("Elements are " + Arrays.toString(elements));
+		ArrayList<Integer> formed = new ArrayList<Integer>();
+		ArrayList<Integer> notFormed = new ArrayList<Integer>();
+		for (int i = 0; i < targets.length; i++) {
+			if (SubsetSum.isSumPossible(elements, numElements, targets[i]))
+				formed.add(targets[i]);
+			else
+				notFormed.add(targets[i]);
+		}
+		System.out.println("Can be formed: " + formed);
+		System.out.println("Cannot be formed: " + notFormed);
+	}
 
-	// private static void testSubsetSum() {
-	// 	System.out.println("****************** Subset Sum ******************\n");
-	// 	int elements[] = { 3, 34, 4, 12, 5, 2 };
-	// 	int targets[] = { 3, 9, 12, 13, 20, 22, 26, 27, 38, 47, 50, 62 };
-	// 	testSubsetSumHelper(elements, elements.length, targets, targets.length);
+	private static void testSubsetSum() {
+		System.out.println("****************** Subset Sum ******************\n");
+		int elements[] = { 3, 34, 4, 12, 5, 2 };
+		int targets[] = { 3, 9, 12, 13, 20, 22, 26, 27, 38, 47, 50, 62 };
+		testSubsetSumHelper(elements, elements.length, targets, targets.length);
 
-	// 	System.out.println("\n***\n");
-	// 	elements = new int[] { 15, 22, 14, 26, 32, 9, 16, 8 };
-	// 	targets = new int[] { 8, 12, 10, 40, 54, 80, 114, 118, 121, 125, 150 };
-	// 	testSubsetSumHelper(elements, elements.length, targets, targets.length);
+		System.out.println("\n***\n");
+		elements = new int[] { 15, 22, 14, 26, 32, 9, 16, 8 };
+		targets = new int[] { 8, 12, 10, 40, 54, 80, 114, 118, 121, 125, 150 };
+		testSubsetSumHelper(elements, elements.length, targets, targets.length);
 
-	// 	System.out.println("\n***\n");
-	// 	elements = new int[] { 41, 34, 21, 20, 8, 7, 7, 4, 3, 3 };
-	// 	targets = new int[] { 1, 4, 8, 9, 16, 22, 28, 50, 89, 122, 138, 139, 148, 150, 183 };
-	// 	testSubsetSumHelper(elements, elements.length, targets, targets.length);
-	// }
+		System.out.println("\n***\n");
+		elements = new int[] { 41, 34, 21, 20, 8, 7, 7, 4, 3, 3 };
+		targets = new int[] { 1, 4, 8, 9, 16, 22, 28, 50, 89, 122, 138, 139, 148, 150, 183 };
+		testSubsetSumHelper(elements, elements.length, targets, targets.length);
+	}
 
 	// private static void testKnapsackHelper(int weights[], int profits[], int numElements, int W[], int numW) {
 	// 	System.out.println("Weights are " + Arrays.toString(weights));
@@ -144,7 +144,7 @@ public class TestCorrectness {
 	}
 
 	public static void main(String[] args) throws Exception {
-		// testSubsetSum();
+		testSubsetSum();
 		// testKnapsack();
 		testMaxSumSubarray();
 		testMIS();
