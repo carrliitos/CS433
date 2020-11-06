@@ -40,34 +40,34 @@ public class TestCorrectness {
 		testSubsetSumHelper(elements, elements.length, targets, targets.length);
 	}
 
-	// private static void testKnapsackHelper(int weights[], int profits[], int numElements, int W[], int numW) {
-	// 	System.out.println("Weights are " + Arrays.toString(weights));
-	// 	System.out.println("Profits are " + Arrays.toString(profits));
-	// 	System.out.println();
-	// 	for (int w = 0; w < numW; w++)
-	// 		System.out.printf("Optimal profit for knapsack of capacity %2d is %3d%n", W[w],
-	// 				Knapsack01.findOptimalProfit(profits, weights, weights.length, W[w]));
-	// }
+	private static void testKnapsackHelper(int weights[], int profits[], int numElements, int W[], int numW) {
+		System.out.println("Weights are " + Arrays.toString(weights));
+		System.out.println("Profits are " + Arrays.toString(profits));
+		System.out.println();
+		for (int w = 0; w < numW; w++)
+			System.out.printf("Optimal profit for knapsack of capacity %2d is %3d%n", W[w],
+					Knapsack01.findOptimalProfit(profits, weights, weights.length, W[w]));
+	}
 
-	// private static void testKnapsack() {
-	// 	System.out.println("\n****************** 0-1 Knapsack ******************\n");
-	// 	int weights[] = { 5, 4, 6, 3, 2 };
-	// 	int profits[] = { 10, 40, 30, 50, 25 };
-	// 	int W[] = { 2, 3, 5, 10, 14, 15, 17, 20 };
-	// 	testKnapsackHelper(weights, profits, weights.length, W, W.length);
+	private static void testKnapsack() {
+		System.out.println("\n****************** 0-1 Knapsack ******************\n");
+		int weights[] = { 5, 4, 6, 3, 2 };
+		int profits[] = { 10, 40, 30, 50, 25 };
+		int W[] = { 2, 3, 5, 10, 14, 15, 17, 20 };
+		testKnapsackHelper(weights, profits, weights.length, W, W.length);
 
-	// 	System.out.println("\n***\n");
-	// 	weights = new int[] { 12, 7, 11, 8, 9 };
-	// 	profits = new int[] { 24, 13, 23, 15, 16 };
-	// 	W = new int[] { 26, 46, 60, 80 };
-	// 	testKnapsackHelper(weights, profits, weights.length, W, W.length);
+		System.out.println("\n***\n");
+		weights = new int[] { 12, 7, 11, 8, 9 };
+		profits = new int[] { 24, 13, 23, 15, 16 };
+		W = new int[] { 26, 46, 60, 80 };
+		testKnapsackHelper(weights, profits, weights.length, W, W.length);
 
-	// 	System.out.println("\n***\n");
-	// 	weights = new int[] { 23, 31, 29, 44, 53, 38, 63, 85, 89, 82 };
-	// 	profits = new int[] { 92, 57, 49, 68, 60, 43, 67, 84, 87, 72 };
-	// 	W = new int[] { 165, 310, 400, 410, 800 };
-	// 	testKnapsackHelper(weights, profits, weights.length, W, W.length);
-	// }
+		System.out.println("\n***\n");
+		weights = new int[] { 23, 31, 29, 44, 53, 38, 63, 85, 89, 82 };
+		profits = new int[] { 92, 57, 49, 68, 60, 43, 67, 84, 87, 72 };
+		W = new int[] { 165, 310, 400, 410, 800 };
+		testKnapsackHelper(weights, profits, weights.length, W, W.length);
+	}
 
 	private static void testMaxSumSubarrayHelper(int A[], int length) {
 		System.out.print("Array: " + Arrays.toString(A) + "\n");
@@ -145,7 +145,7 @@ public class TestCorrectness {
 
 	public static void main(String[] args) throws Exception {
 		testSubsetSum();
-		// testKnapsack();
+		testKnapsack();
 		testMaxSumSubarray();
 		testMIS();
 		testLCS();

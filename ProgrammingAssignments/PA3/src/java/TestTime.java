@@ -1,9 +1,7 @@
 import java.util.Random;
 
 public class TestTime {
-
 	private static void loadTestMaxSumSubArray() throws Exception {
-		
 		System.out.println("*** Brute-Force vs Divide-and-Conquer vs Dynamic-Programming ***\n");
 		for (int maxArrayLen = 1000; maxArrayLen <= 150000; maxArrayLen = (int) (maxArrayLen * 1.2)) {
 			Random rand = new Random(System.currentTimeMillis());
