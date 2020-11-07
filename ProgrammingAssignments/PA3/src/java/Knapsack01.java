@@ -1,4 +1,3 @@
-// @ Abraham
 import java.util.Arrays;
 
 public class Knapsack01 {
