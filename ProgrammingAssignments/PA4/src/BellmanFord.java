@@ -26,7 +26,12 @@ public class BellmanFord extends Graph {
 			if(!didDistChange) { return dist; }
 		}
 		for(int j = 0; j < numVertices; j++) {
-			
+			for(int k = 0; k < adjList.get(j).size(); k++) {
+				Edge e = adjList.get(j).get(k);
+				if(dist[e.src] == Integer.MAX_VALUE) { continue; }
+				if(dist[e.src] + e.weight < dist[e.dest]) { return null; }
+			}
 		}
+		return dist;
 	}
 }
