@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class TestTime {
 
-	static final String DIJKSTRA_FOLDER = "<FILL IN THE PATH WHERE THE FILES ARE KEPT>";
+	static final String DIJKSTRA_FOLDER = "RoadNetworks/";
 
 	static void testDijkstraTime() throws Exception {
 		System.out.println("*** Time Test Dijkstra ***\n");
