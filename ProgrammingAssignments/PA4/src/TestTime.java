@@ -36,7 +36,7 @@ public class TestTime {
 			double timeStart = System.currentTimeMillis();
 			for (int i = 0; i < numSources; i++) {
 				int v = rand.nextInt(graph.numVertices);
-				// System.out.println("Running Dijkstra for source " + v + "...");
+				System.out.println("Running Dijkstra for source " + v + "...");
 				int dist[] = dijk.execute(v);
 				for (int k = 0; k < graph.numVertices; k++) {
 					if (dist[k] == Integer.MAX_VALUE)
