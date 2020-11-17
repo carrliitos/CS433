@@ -12,8 +12,18 @@ public class TestTime {
 
 	static void testDijkstraTime() throws Exception {
 		System.out.println("*** Time Test Dijkstra ***\n");
-		String fileNames[] = { "DC.len", "RI.len", "VT.len", "SD.len", "MA.len", "WI.len", "IL.len", "FL.len", "CA.len",
-				"TX.len" };
+		String fileNames[] = { 
+			"DC.len", 
+			"RI.len", 
+			"VT.len", 
+			"SD.len", 
+			"MA.len", 
+			"WI.len", 
+			"IL.len", 
+			"FL.len", 
+			"CA.len",
+			"TX.len" 
+		};
 		Random rand = new Random(0);
 		for (int j = 0; j < fileNames.length; j++) {
 			System.out.println("Loading " + fileNames[j] + "...");
