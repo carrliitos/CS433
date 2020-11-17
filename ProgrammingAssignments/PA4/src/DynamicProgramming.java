@@ -3,15 +3,16 @@ import java.util.ArrayList;
 public class DynamicProgramming {
 
 	public static int numberOfBinaryStringsWithNoConsecutiveOnes(int n) {
-		int B[] = new int[n]; 
-		B[1] = 2;
-		B[2] = 3; 
+		int x = 1;
+		int y = 1;
 
-		for(int i = 2; i < n; i++){ 
-			B[i] = B[i - 1] + B[i - 2]; 
+		for(int i = 1; i < n; i++) {
+			int temp = x;
+			x += y;
+			y = temp;
 		}
 
-		return B[n-1] + B[n-2]; 
+		return x + y; 
 	}
 
 	public static ArrayList<Integer> longestIncreasingSubsequence(int[] arr, int len) {
@@ -26,6 +27,7 @@ public class DynamicProgramming {
 		* If the values arr[0], arr[1], . . . , arr[i − 1] are all greater 
 		* than arr[i], then let maxIndex = −1
 		*/
+		
 		for(int i = 0; i < len; i++) {
 			lis[i] = 1;
 			pred[i] = -1;
