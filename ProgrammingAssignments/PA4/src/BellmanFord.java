@@ -1,5 +1,6 @@
-public class BellmanFord extends Graph {
+import java.util.Arrays;
 
+public class BellmanFord extends Graph {
 	public BellmanFord(final Graph graph) {
 		super(graph);
 	}
