@@ -83,14 +83,14 @@ public class DynamicProgramming {
 		}
 
 		ArrayList<Integer> dynamicArray = new ArrayList<>();
-		int temp = maxIndex;
-		dynamicArray.add(arr[temp]);
-		int temp2 = pred[temp];
+		int lisIndex = maxIndex;
+		dynamicArray.add(arr[lisIndex]);
+		int temp = pred[lisIndex];
 
-		while(temp != temp2) {
-			temp = temp2;
-			dynamicArray.add(arr[temp]);
-			temp2 = pred[temp];
+		while(lisIndex != temp) {
+			lisIndex = temp;
+			dynamicArray.add(arr[lisIndex]);
+			temp = pred[lisIndex];
 		}
 
 		reverse(dynamicArray);
