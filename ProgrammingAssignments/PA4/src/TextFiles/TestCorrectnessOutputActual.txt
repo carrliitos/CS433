@@ -16,10 +16,10 @@ Number of 13-length binary strings with no consecutive ones is  610
 Number of 14-length binary strings with no consecutive ones is  987
 Number of 15-length binary strings with no consecutive ones is 1597
 
-A Longest Increasing Subsequence of [10, 22, 9, 33, 21, 50, 41, 60, 55, 57] is [22, 33, 50, 55, 57]
-A Longest Increasing Subsequence of [10, 22, 9, 33, 21, 50, 41, 60, 7] is [22, 33, 50, 60]
-A Longest Increasing Subsequence of [-1, 2, 0, 4, 8, 5, 7, 10, 3] is [2, 4, 5, 7, 10]
-A Longest Increasing Subsequence of [-30, 10, -20, 0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15] is [-20, 0, 4, 6, 9, 13, 15]
+A Longest Increasing Subsequence of [10, 22, 9, 33, 21, 50, 41, 60, 55, 57] is [10, 22, 33, 50, 55, 57]
+A Longest Increasing Subsequence of [10, 22, 9, 33, 21, 50, 41, 60, 7] is [10, 22, 33, 50, 60]
+A Longest Increasing Subsequence of [-1, 2, 0, 4, 8, 5, 7, 10, 3] is [-1, 2, 4, 5, 7, 10]
+A Longest Increasing Subsequence of [-30, 10, -20, 0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15] is [-30, -20, 0, 4, 6, 9, 13, 15]
 
 ****************** Bellman-Ford ******************
 
