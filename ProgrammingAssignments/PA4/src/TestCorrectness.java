@@ -4,16 +4,16 @@ import java.util.Arrays;
 
 public class TestCorrectness {
 
-	static final String BELLMANFORD1_GRAPH_PATH = "bellmanford1.txt";
-	static final String BELLMANFORD2_GRAPH_PATH = "bellmanford2.txt";
-	static final String BELLMANFORD3_GRAPH_PATH = "bellmanford3.txt";
+	static final String BELLMANFORD1_GRAPH_PATH = "TextFiles/bellmanford1.txt";
+	static final String BELLMANFORD2_GRAPH_PATH = "TextFiles/bellmanford2.txt";
+	static final String BELLMANFORD3_GRAPH_PATH = "TextFiles/bellmanford3.txt";
 
-	static final String DIJKSTRA1_GRAPH_PATH = "dijkstra1.txt";
-	static final String DIJKSTRA2_GRAPH_PATH = "dijkstra2.txt";
+	static final String DIJKSTRA1_GRAPH_PATH = "TextFiles/dijkstra1.txt";
+	static final String DIJKSTRA2_GRAPH_PATH = "TextFiles/dijkstra2.txt";
 
-	static final String APSP1_GRAPH_PATH = "apsp1.txt";
-	static final String APSP2_GRAPH_PATH = "apsp2.txt";
-	static final String APSP3_GRAPH_PATH = "apsp3.txt";
+	static final String APSP1_GRAPH_PATH = "TextFiles/apsp1.txt";
+	static final String APSP2_GRAPH_PATH = "TextFiles/apsp2.txt";
+	static final String APSP3_GRAPH_PATH = "TextFiles/apsp3.txt";
 
 	private static void testDynamicProgramming() {
 		for (int i = 1; i <= 15; i++)
