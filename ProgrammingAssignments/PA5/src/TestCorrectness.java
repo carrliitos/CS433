@@ -9,37 +9,37 @@ public class TestCorrectness {
 	static final String SCC3_GRAPH_PATH = "TextFiles/scc3.txt";
 	static final String SCC4_GRAPH_PATH = "TextFiles/scc4.txt";
 
-	// private static void testUnionFind() {
-	// 	UnionFind uf = new UnionFind(16);
-	// 	System.out.println("Initial sets are 0-15\n");
-	// 	for (int i = 0; i < 15; i += 4) {
-	// 		System.out.printf("UNION(%d,%d)%n", i, i + 1);
-	// 		uf.doUnion(i, i + 1);
-	// 	}
-	// 	System.out.println();
-	// 	for (int i = 0; i < 16; i++) {
-	// 		System.out.printf("List containing %2d: ", i);
-	// 		uf.find(i).printList();
-	// 	}
-	// 	System.out.println("\nUNION(0,5)");
-	// 	System.out.println("UNION(10,12)");
-	// 	System.out.println("UNION(0,10)\n");
-	// 	uf.doUnion(0, 5);
-	// 	uf.doUnion(10, 12);
-	// 	uf.doUnion(0, 10);
-	// 	for (int i = 0; i < 16; i++) {
-	// 		System.out.printf("List containing %2d: ", i);
-	// 		uf.find(i).printList();
-	// 	}
-	// 	System.out.println("\nUNION(6,8)");
-	// 	System.out.println("UNION(8,5)\n");
-	// 	uf.doUnion(6, 8);
-	// 	uf.doUnion(8, 5);
-	// 	for (int i = 0; i < 16; i++) {
-	// 		System.out.printf("List containing %2d: ", i);
-	// 		uf.find(i).printList();
-	// 	}
-	// }
+	private static void testUnionFind() {
+		UnionFind uf = new UnionFind(16);
+		System.out.println("Initial sets are 0-15\n");
+		for (int i = 0; i < 15; i += 4) {
+			System.out.printf("UNION(%d,%d)%n", i, i + 1);
+			uf.doUnion(i, i + 1);
+		}
+		System.out.println();
+		for (int i = 0; i < 16; i++) {
+			System.out.printf("List containing %2d: ", i);
+			uf.find(i).printList();
+		}
+		System.out.println("\nUNION(0,5)");
+		System.out.println("UNION(10,12)");
+		System.out.println("UNION(0,10)\n");
+		uf.doUnion(0, 5);
+		uf.doUnion(10, 12);
+		uf.doUnion(0, 10);
+		for (int i = 0; i < 16; i++) {
+			System.out.printf("List containing %2d: ", i);
+			uf.find(i).printList();
+		}
+		System.out.println("\nUNION(6,8)");
+		System.out.println("UNION(8,5)\n");
+		uf.doUnion(6, 8);
+		uf.doUnion(8, 5);
+		for (int i = 0; i < 16; i++) {
+			System.out.printf("List containing %2d: ", i);
+			uf.find(i).printList();
+		}
+	}
 
 	// private static void testKruskal() throws FileNotFoundException {
 	// 	Kruskal kruskal = new Kruskal(MST_GRAPH_PATH, GraphType.WEIGHTED);
@@ -91,8 +91,8 @@ public class TestCorrectness {
 	// }
 
 	public static void main(String args[]) throws Exception {
-		// System.out.println("****************** Union Find ******************\n");
-		// testUnionFind();
+		System.out.println("****************** Union Find ******************\n");
+		testUnionFind();
 		// System.out.println("\n****************** Kruskal ******************\n");
 		// testKruskal();
 		System.out.println("\n****************** KMP ******************\n");
