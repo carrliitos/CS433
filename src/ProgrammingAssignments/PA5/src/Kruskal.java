@@ -12,6 +12,22 @@ public class Kruskal extends Graph {
 		Collections.sort(edgeList);
 	}
 
-	public ArrayList<Edge> runKruskal() { // complete this function
+	public ArrayList<Edge> runKruskal() {
+		sort();
+		UnionFind objUF = new UnionFind(numVertices);
+		ArrayList<Edge> dynamicArray = new ArrayList<Edge>();
+		int numEdgesAdded = 0;
+		for(Edge e : edgeList) {
+			int src = e.src;
+			int dest = e.dest;
+			if(objUF.find(src) != objUF.find(dest)) {
+				objUF.doUnion(src, dest);
+				dynamicArray.add(e);
+				numEdgesAdded++;
+
+				if(numEdgesAdded == numVertices - 1) break;
+			}
+		}
+		return dynamicArray;
 	}
 }

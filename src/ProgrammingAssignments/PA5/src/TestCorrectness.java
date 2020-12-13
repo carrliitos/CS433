@@ -41,63 +41,63 @@ public class TestCorrectness {
 		}
 	}
 
-	// private static void testKruskal() throws FileNotFoundException {
-	// 	Kruskal kruskal = new Kruskal(MST_GRAPH_PATH, GraphType.WEIGHTED);
-	// 	ArrayList<Edge> mst = kruskal.runKruskal();
-	// 	int mstWeight = 0;
-	// 	for (Edge e : mst)
-	// 		mstWeight += e.weight;
-	// 	System.out.printf("MST has weight %d%nThe edges are: %s%n", mstWeight, mst);
-	// }
+	private static void testKruskal() throws FileNotFoundException {
+		Kruskal kruskal = new Kruskal(MST_GRAPH_PATH, GraphType.WEIGHTED);
+		ArrayList<Edge> mst = kruskal.runKruskal();
+		int mstWeight = 0;
+		for (Edge e : mst)
+			mstWeight += e.weight;
+		System.out.printf("MST has weight %d%nThe edges are: %s%n", mstWeight, mst);
+	}
 
-	// private static void testKMPHelper(String text, String patterns[]) {
-	// 	System.out.println("*** Text is " + text + " *** \n");
-	// 	int numPatterns = patterns.length;
-	// 	for (int i = 0; i < numPatterns; i++) {
-	// 		ArrayList<Integer> occurrences = KMP.runKMP(text, patterns[i]);
-	// 		System.out.printf("Pattern %-7s has %d occurrence(s): ", patterns[i], occurrences.size());
-	// 		System.out.println(occurrences);
-	// 	}
-	// 	System.out.println();
-	// }
+	private static void testKMPHelper(String text, String patterns[]) {
+		System.out.println("*** Text is " + text + " *** \n");
+		int numPatterns = patterns.length;
+		for (int i = 0; i < numPatterns; i++) {
+			ArrayList<Integer> occurrences = KMP.runKMP(text, patterns[i]);
+			System.out.printf("Pattern %-7s has %d occurrence(s): ", patterns[i], occurrences.size());
+			System.out.println(occurrences);
+		}
+		System.out.println();
+	}
 
-	// private static void testKMP() {
-	// 	String text = "AABAACAADAABAABAACAADAAD";
-	// 	String patterns[] = { "AABA", "AABAA", "ABA", "CA", "EF", "AAC", "AAD" };
-	// 	testKMPHelper(text, patterns);
+	private static void testKMP() {
+		String text = "AABAACAADAABAABAACAADAAD";
+		String patterns[] = { "AABA", "AABAA", "ABA", "CA", "EF", "AAC", "AAD" };
+		testKMPHelper(text, patterns);
 
-	// 	text = "MISSISSIPPILY_OR_MISSISSIPPILESSLY";
-	// 	patterns = new String[] { "ISS", "ESS", "_", "IPP", "MISS", "LESSLY", "LY", "LESSLIE" };
-	// 	testKMPHelper(text, patterns);
-	// }
+		text = "MISSISSIPPILY_OR_MISSISSIPPILESSLY";
+		patterns = new String[] { "ISS", "ESS", "_", "IPP", "MISS", "LESSLY", "LY", "LESSLIE" };
+		testKMPHelper(text, patterns);
+	}
 
-	// private static void testSCC() throws FileNotFoundException {
-	// 	SCC scc = new SCC(SCC1_GRAPH_PATH, GraphType.UNWEIGHTED);
-	// 	ArrayList<ArrayList<Integer>> components = scc.execute();
-	// 	System.out.printf("Components of Graph 1 are: %s%n", components);
+	private static void testSCC() throws FileNotFoundException {
+		SCC scc = new SCC(SCC1_GRAPH_PATH, GraphType.UNWEIGHTED);
+		ArrayList<ArrayList<Integer>> components = scc.execute();
+		System.out.printf("Components of Graph 1 are: %s%n", components);
 
-	// 	scc = new SCC(SCC2_GRAPH_PATH, GraphType.UNWEIGHTED);
-	// 	components = scc.execute();
-	// 	System.out.printf("Components of Graph 2 are: %s%n", components);
+		scc = new SCC(SCC2_GRAPH_PATH, GraphType.UNWEIGHTED);
+		components = scc.execute();
+		System.out.printf("Components of Graph 2 are: %s%n", components);
 
-	// 	scc = new SCC(SCC3_GRAPH_PATH, GraphType.UNWEIGHTED);
-	// 	components = scc.execute();
-	// 	System.out.printf("Components of Graph 3 are: %s%n", components);
+		scc = new SCC(SCC3_GRAPH_PATH, GraphType.UNWEIGHTED);
+		components = scc.execute();
+		System.out.printf("Components of Graph 3 are: %s%n", components);
 
-	// 	scc = new SCC(SCC4_GRAPH_PATH, GraphType.UNWEIGHTED);
-	// 	components = scc.execute();
-	// 	System.out.printf("Components of Graph 4 are: %s%n", components);
+		scc = new SCC(SCC4_GRAPH_PATH, GraphType.UNWEIGHTED);
+		components = scc.execute();
+		System.out.printf("Components of Graph 4 are: %s%n", components);
 
-	// }
+	}
 
 	public static void main(String args[]) throws Exception {
 		System.out.println("****************** Union Find ******************\n");
 		testUnionFind();
-		// System.out.println("\n****************** Kruskal ******************\n");
-		// testKruskal();
-		// System.out.println("\n****************** KMP ******************\n");
-		// testKMP();
-		// System.out.println("****************** Strongly Connected Components ******************\n");
-		// testSCC();
+		System.out.println("\n****************** Kruskal ******************\n");
+		testKruskal();
+		System.out.println("\n****************** KMP ******************\n");
+		testKMP();
+		System.out.println("****************** Strongly Connected Components ******************\n");
+		testSCC();
 	}
 }
