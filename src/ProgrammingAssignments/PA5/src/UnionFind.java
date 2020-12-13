@@ -21,26 +21,29 @@ public class UnionFind {
 	private void append(LinkedList arg1, LinkedList arg2) { 
 		arg1.tail.next = arg2.head;
 		arg1.tail = arg2.tail;
-		arg1.size = arg1.size + arg2.size;
+		arg1.size += arg2.size;
 
-		// TODO: Fix this for-each
-		for(ListNode node : arg2) {
-			representatives[node.value] = arg1;
+		for(int i = 0; i < arg2.size; i++) {
+			int y = 0;
+			ListNode currentNode = arg2.head;
+			while(currentNode != null) {
+				if(y == i) representatives[currentNode.value] = arg1;
+				y++;
+				currentNode = currentNode.next;
+			}
 		}
 		
-		arg2.head = arg2.tail = null;
+		arg2.head = null;
+		arg2.tail = null;
 	}
 
 	public void doUnion(int x, int y) { 
 		LinkedList LLx = find(x);
 		LinkedList LLy = find(y);
 
-		if(LLx != LLy) {
-			if(LLx.getSize() >= LLy.getSize()) {
-				append(LLx, LLy);
-			}else {
-				append(LLy, LLx);
-			}
+		if(!LLx.equals(LLy)) {
+			if(LLx.size >= LLy.size) append(LLx, LLy);
+			else append(LLy, LLx);
 		}
 	}
 }
